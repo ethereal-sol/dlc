@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Status — Серый стеклянный</title>
+  <title>qazaqdlc - status</title>
   <style>
     :root{--bg0:#0f1115;--bg1:#141720;--bg2:#1b1f2a;--fg:#e6e7ea;--muted:#a6acb6;--sub:#8f97a6;--ok:#16a34a;--warn:#eab308;--part:#f59e0b;--down:#ef4444;--maint:#60a5fa;--card:rgba(255,255,255,.03);--border:rgba(255,255,255,.10);--border-soft:rgba(255,255,255,.06);--glass-grad:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02))}
     *{box-sizing:border-box}html,body{height:100%}body{margin:0;color:var(--fg);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",Arial;background:radial-gradient(1200px 800px at 70% 20%,#1d2230 0%,#141824 60%,#0f1115 100%) fixed;overflow-x:hidden}
@@ -78,7 +78,7 @@
       <span class="dot pulse" id="bannerDot"></span>
       <div>
         <h1 id="bannerText">Загрузка статуса…</h1>
-        <small id="bannerDesc">Получаем данные из status.json</small>
+        <small id="bannerDesc">Получаем данные</small>
       </div>
     </section>
 
@@ -95,10 +95,6 @@
         <h2>Инциденты</h2>
         <div id="incidents"><div class="inc"><div class="skeleton" style="width:70%;height:18px"></div><div class="skeleton" style="width:40%;margin-top:8px"></div></div></div>
       </section>
-    </div>
-
-    <footer>Данные берутся из файла <code>status.json</code>. Если загрузка не удалась — отобразится ошибка.</footer>
-  </div>
 
   <svg width="0" height="0" style="position:absolute"><filter id="grainy"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11"><animate attributeName="seed" from="11" to="200" dur="5s" repeatCount="indefinite"/></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix><feComponentTransfer><feFuncA type="table" tableValues="0 0.6"/></feComponentTransfer></filter></svg>
 
