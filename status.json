@@ -1,6 +1,6 @@
 {
   "status": "operational",
-  "last_updated": "2025-12-04T12 :00:00Z",
+  "last_updated": "2025-12-04T12:00:00Z",
   "components": [
     { "id": "web",  "name": "Website",        "status": "operational",   "uptime_90d": 100.00 },
     { "id": "api",  "name": "ethereal free 1.2b sc",   "status": "operational",      "uptime_90d": 100.00 }
