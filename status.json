@@ -1,0 +1,40 @@
+{
+  "status": "minor",
+  "last_updated": "2025-12-04T12:00:00Z",
+  "components": [
+    { "id": "web",  "name": "Веб-сайт",        "status": "operational",   "uptime_90d": 99.98 },
+    { "id": "api",  "name": "Публичный API",   "status": "degraded",      "uptime_90d": 99.72 },
+    { "id": "db",   "name": "База данных",     "status": "operational",   "uptime_90d": 99.90 },
+    { "id": "cdn",  "name": "CDN",             "status": "operational",   "uptime_90d": 99.99 },
+    { "id": "auth", "name": "Аутентификация",  "status": "operational",   "uptime_90d": 99.95 }
+  ],
+  "incidents": [
+    {
+      "id": "2025-12-01-1",
+      "title": "Пики задержек API",
+      "severity": "minor",
+      "start": "2025-12-01T14:20:00Z",
+      "end": "2025-12-01T15:05:00Z",
+      "affected": ["api"],
+      "updates": [
+        { "time": "2025-12-01T14:25:00Z", "status": "investigating", "text": "Повышенная латентность, изучаем." },
+        { "time": "2025-12-01T14:35:00Z", "status": "identified",    "text": "Узкое место в пуле подключений к БД." },
+        { "time": "2025-12-01T14:55:00Z", "status": "monitoring",    "text": "Расширили пул и применили хотфикс." },
+        { "time": "2025-12-01T15:05:00Z", "status": "resolved",      "text": "Латентность нормализована." }
+      ]
+    },
+    {
+      "id": "2025-11-22-maint",
+      "title": "Плановое обслуживание базы",
+      "severity": "maintenance",
+      "start": "2025-11-22T00:00:00Z",
+      "end": "2025-11-22T02:00:00Z",
+      "affected": ["db"],
+      "updates": [
+        { "time": "2025-11-22T00:00:00Z", "status": "in_progress", "text": "Техработы начались." },
+        { "time": "2025-11-22T01:40:00Z", "status": "update",      "text": "Миграции проходят штатно." },
+        { "time": "2025-11-22T02:00:00Z", "status": "completed",   "text": "Работы завершены." }
+      ]
+    }
+  ]
+}
